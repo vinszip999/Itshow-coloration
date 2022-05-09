@@ -1,0 +1,121 @@
+/* 레이어 팝업 CSS */
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 500px;
+    height: 350px;
+    border-radius: 0.5rem;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.signup-content {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    background-color: #a8a7a7;
+    padding: 1rem 1.5rem;
+    width: 500px;
+    height: 60px;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    text-align: center;
+    font-size: 13pt;
+
+    transform: translate(-50%, -50%);
+}
+
+.signup {
+    font-family: 'GmarketSansLight';
+    color: white;
+}
+
+.title {
+    font-family: 'GmarketSansMedium';
+    color: #205A8F;
+}
+
+.forget-content {
+    margin-top: 30px;
+}
+
+.forget:link, .forget:visited {
+    font-family: 'GmarketSansLight';
+    color: #707070;
+}
+
+.forget:hover, .forget:active {
+    text-decoration: underline;
+}
+
+
+label {
+    display: block;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+.close-button {
+    position: fixed;
+    width: 3rem;
+    left:90%;
+    bottom:85%;
+    line-height: 3rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+
+}
+
+form {
+    margin: 0 auto;
+    width: 459px;
+}
+
+input {
+    width: 439px;
+    background-color: #efefef;
+    border-radius: 6px;
+    border: 1px solid #dedede;
+    padding: 10px;
+    margin-top: 3px;
+    font-size: 0.9em;
+    color: #3a3a3a;
+}
+
+input:focus {
+    border: 1px solid #97d6eb;
+}
+
+#submit-button {
+    font-family: 'GmarketSansLight';
+    color: white;
+    background-color: #205A8F;
+}
+
+#submit-button:focus {
+    outline: none;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}

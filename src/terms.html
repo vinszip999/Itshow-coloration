@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html> 
+
+<head> 
+  <title>다채로움</title>
+  <meta charset="UTF-8" />
+  <script defer src="js/terms.js"></script> 
+  <link rel="stylesheet" href="css/terms.css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="logo">
+      <h2>회원가입</h2>
+    </div>
+    <div class="contents">
+      <form action="/" method="POST" id="form__wrap">
+        <div class="terms__check__all">
+          <input type="checkbox" name="checkAll" id="checkAll"/>
+          <label for="checkAll">다채로움 이용약관, 개인정보 수집 및 이용, 위치정보 이용약관에 모두 동의합니다.
+          </label>
+        </div>
+        <ul class="terms__list">
+          <li class="terms__box">
+            <div class="input__check">
+              <input type="checkbox" name="agreement" id="termsOfService" value="termsOfService" required/>
+              <label for="termsOfService" class="required">다채로움 이용약관 동의</label>
+            </div>
+            <div class="terms__content">
+              다채로움 웹을 사용하기 위해 이용약관에 동의합니다. <br>
+              수집한 이용약관은 다채로움 웹 서비스 이용 동의 이외의 목적으로는 사용하지 않습니다.
+            </div>
+          </li>
+          <li class="terms__box">
+            <div class="input__check">
+              <input type="checkbox" name="agreement" id="privacyPolicy" value="privacyPolicy" required />
+              <label for="privacyPolicy" class="required">개인정보 수집 및 이용 동의</label>
+            </div>
+            <div class="terms__content">
+              취미 활동에 참여하기 위해 개인정보를 수집합니다. <br>
+              수집한 개인정보는 참여자 확인 이외의 목적으로는 사용하지 않습니다.
+            </div>
+          </li>
+          <li class="terms__box">
+            <div class="input__check">
+              <input type="checkbox" name="agreement" id="allowPromotions" value="allowPromotions" required/>
+              <label for="allowPromotions" class="required">위치정보 이용약관 동의</label>
+            </div>
+            <div class="terms__content">
+              취미 활동에 참여하기 위한 위치정보를 수집합니다. <br>
+              수집한 위치정보는 “주변에 나와 같은 취미활동자 찾기” 서비스 이외에는 사용하지 않습니다.
+            </div>
+          </li>
+        </ul>
+        <button type="submit" class="next-button" onclick="location.href='signup.html'" disabled>확인</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

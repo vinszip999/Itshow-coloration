@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다채로움</title>
+    <link rel="stylesheet" href="../css/detail.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <div id="logo-box">
+                <a href="index.html">로고</a>
+            </div>
+            <nav id="nav-box">
+                <ul>
+                    <li class="highlight"><a href="board.html">게시판</a></li>
+                    <li class="active">|</li>
+                    <li class="highlight"><a href="calendar.html">캘린더</a></li>
+                </ul>
+            </nav>
+            <nav id="signup-box">
+                <ul>
+                    <li><button type="button" class="trigger">로그인</button></li>
+                    <li>|</li>
+                    <li><a href="terms.html">회원가입</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <table>
+            <tr>
+                <td>
+                    <div id="main">
+                        <div id="main-content">
+                            <div id="title">샘플</div>
+                            <div id="date-area">
+                                <!-- put icon here -->
+                                일시
+                            </div>
+                            <div id="location-area">
+                                <!-- put icon here -->
+                                장소
+                            </div>
+            
+                            <div id="image-area">
+                                <!-- show your image here -->
+                                예시 이미지
+                            </div>
+            
+                            <div id="context">
+                                이 곳에는 글이 작성됩니다. <br>
+                                다채로움 웹페이지 샘플 문장입니다. <br>
+                                게시판 디테일 페이지에서는 글은 자동 중앙 정렬됩니다. <br>
+                                작성자는 이 detail 페이지에서 글을 수정할 수 있습니다. <br>
+                                사용자들은 글을 보고 참여 신청을 할 수 있습니다.
+                            </div>
+            
+            
+                            <div id="hashtag">
+                                <!-- show your hashtag here -->
+                                <ul>
+                                    <li>#테스트</li>
+                                    <li>#해시태그</li>
+                                    <li>#취미</li>
+                                </ul>
+                            </div>
+            
+                            <div id="line"></div>
+            
+                            <div id="profile-box">
+                                <div id="profile-image">
+                                    <!-- show your profile image -->
+                                </div>
+                                <div id="profile-name">
+                                    <span id="name">김수진</span>님
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" id="apply-button">신청하기</button>               
+                </td>
+            </tr>
+        </table>  
+    </main>
+
+    
+
+    <!-- 모달(레이어 팝업) -->
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h1 class="title">로그인</h1>
+            <form action="" method="POST" class="login-form">
+                <label></label>
+                <input type="text" name="userId" required />
+                <label></label>
+                <input type="password" name="userPw" required />
+                <label></label>
+                <input type="submit" id="submit-button" value="로그인"></input>
+            </form>
+            <div class="forget-content">
+                <a href="#" class="forget">비밀번호를 잊어버리셨나요?</a>
+            </div>
+            <div class="signup-content">
+                <span class="signup"><a href="terms.html">회원가입</a></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="js/modal.js"></script>
+
+</html>

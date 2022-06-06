@@ -45,6 +45,10 @@
 
 }
 
+#logo {
+    height: 50px;
+}
+
 #search:focus {
     outline: none;
     padding: 9px;
@@ -124,22 +128,41 @@ a {
 /* main */
 #main {
     width: 100%;
-    justify-content: center;
-    align-items: center;
     color:#205A8F;
     font-family: 'GmarketSansMedium';
+    text-aglin:center;
 }
 
 #header-content {
-    height: 650px;
-    background-color: #205A8F;
+    height: 550px;
+    clear:both;
+    background-image: url('../image/main-back.png');
+    background-size: 100% 100%;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
-#location-image {
-    width:500px;
-    position: relative;
-    top:75px;
-    left:50px;
+#txt-box {
+    margin: auto;
+    margin-top: 230px;
+    float:left;
+}
+
+#txt-main {
+    font-family: 'GmarketSansMedium';
+    font-size: 35px;
+}
+
+#txt-gray {
+    font-family: 'GmarketSansMedium';
+    color:#575757;
+    font-size: 30px;
+}
+
+#header-content img {
+    margin-top: 50px;
+    width:450px;
+    float:right;
 }
 
 #section {
@@ -150,54 +173,45 @@ a {
     padding-right: 10px;
 }
 
-#review-content {
-    height: 500px;
-    background-color: #F3F3F3;
-    justify-content: center;
+#main-content {
+    margin-top: 50px;
+    margin-bottom:50px;
     text-align: center;
 }
 
-
 #line {
-    display: inline-block;
+    display: inline-block; 
     background-color: #205A8F;
     height: 5px;
     width:30%;
     margin-bottom: 15px;
+    position:absolute;
+    left:50%;
+    transform:translate(-50%, -50%);
 }
 
-#review {
-    font-size: 16pt;
-    margin-bottom: 10px;
-}
-
-#review-text {
-    font-size: 14pt;
-}    
-
-.scroll-container {
-    display: inline-block;
-    margin-top: 20px;
-    width: 1000px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    
-    cursor:e-resize;
-}
-
-.card {
-    background-color: #FFFFFF;
-    border-radius: 12px;
-    display: inline-block;
-    width: 400px;
-    height: 300px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
+/* footer */ 
 #footer {
     background-color: #575757;
-    height: 150px;
+    height: 100px;
     width: 100%;
+    align-items: center;
+    clear: both;
+    
 }
+
+#footer img {
+    width: 100px;
+    margin-top: 25px;
+    margin-left: 50px;
+}
+
+#footer p {
+    color:white;
+    font-family:'GmarketSansLight';
+    float: right;
+    font-size: 15px;
+    margin-top: 40px;
+    margin-right: 50px;
+}
+

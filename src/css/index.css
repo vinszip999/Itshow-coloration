@@ -136,7 +136,7 @@ a {
 #header-content {
     height: 550px;
     clear:both;
-    background-image: url('../image/main-back.png');
+    background-image: url('../../image/main-back.png');
     background-size: 100% 100%;
     padding-left: 60px;
     padding-right: 60px;

@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>다채로움</title>
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="../src/css/index.css">
+    <link rel="stylesheet" href="../src/css/modal.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
@@ -15,7 +15,9 @@
     <header>
         <div id="header">
             <div id="logo-box">
-                <a href="index.html">로고</a>
+                <a href="index.html">
+                    <img id="logo" src="../image/logo_small.png"/>
+                </a>
             </div>
             <nav id="nav-box">
                 <ul>
@@ -42,54 +44,34 @@
     <main>
         <div id="main">
             <div id="header-content">
-                <img src="../image/location.png" id="location-image">
-                <!-- 캐릭터 2명 + 말풍선 자리-->
+               <div id="txt-box">
+                   <span id="txt-main">다채롭게,</span> <br>
+                   <span id="txt-gray">취미 활동을 즐기자</span>
+               </div>
+               <div>
+                    <img src="../image/reading-book.png">
+               </div>
             </div>
-            <div id="section">
-                <img src="../image/main_description.svg" id="main-svg"/>
-            </div>
-            <div id="review-content">
-                <div id="line"></div>
-                <p id="review"><b>사용 후기</b></p>
-                <p id="review-text">웹을 사용하고 난 뒤에 후기 몇 개를 모아두았습니다!</p>
-                <div class="scroll-container">
-                    <div class="card">
-                        <p class="username">이미림</p>
-                        <p class="date"></p>
-                        <p class="content">내용</p>
-                    </div>
-                    <div class="card">
-                        <p class="username">이미림</p>
-                        <p class="date"></p>
-                        <p class="content">내용</p>
-                    </div>
-                    <div class="card">
-                        <p class="username">이미림</p>
-                        <p class="date"></p>
-                        <p class="content">내용</p>
-                    </div>
-                    <div class="card">
-                        <p class="username">이미림</p>
-                        <p class="date"></p>
-                        <p class="content">내용</p>
-                    </div>
-                  </div>
+            <div id="line"></div>
+            <div id="main-content">
+                <img src="../image/description.svg">
             </div>
         </div>
     </main>
 
     <footer>
         <div id="footer">
-            
+            <img src="../image/logo_small.png" width="150px">
+			<p>이유빈/김미나/서민정/최지원</p>
         </div>
     </footer>
-
+    
     <!-- 모달(레이어 팝업) -->
     <div class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <h1 class="title">로그인</h1>
-            <form action="" method="POST" class="login-form">
+            <form action="" method="post" class="login-form">
                 <label></label>
                 <input type="text" name="userId" required />
                 <label></label>
@@ -107,6 +89,6 @@
     </div>
 </body>
 
-<script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript" src="../src/js/modal.js"></script>
 
 </html>

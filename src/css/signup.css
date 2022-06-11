@@ -43,12 +43,46 @@ body {
     height: 100%;
 }
 
-#content {
+/* #content {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
     width: 460px;
+} */
+
+#content {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 500px;
 }
+
+/* #content { */
+    /* display: table-cell;
+    vertical-align: middle; */
+
+    /* display: flex;
+    align-items: center; */
+
+    /* display: flex;
+    align-items: center;
+    /* 수직 정렬 */
+    /* flex-direction: row; */
+    /* default: row */
+    /* justify-content: center;
+    flex direction에 대해서 정렬방식 선택 */
+
+    /* position: relative;
+    /* display: flex; */
+    /* justify-content: center; */
+/* } */
+
+/* .school { */
+    /* display: inline-block; */
+    /* margin: auto; */
+    /* margin-left: auto; */
+    /* margin-left: 300px; */
+/* } */
 
 /* 입력폼 */
 input {
@@ -160,11 +194,32 @@ select {
 }
 
 #button {
-    width:80px;
+    width: 80px;
     font-size: 10pt;
     padding: 3px 0px 3px 0px;
-    border:1px solid #a8a7a7;
-    border-radius: 8px; 
+    border: 1px solid #a8a7a7;
+    border-radius: 8px;
     margin-top: 5px;
     cursor: pointer;
+}
+
+
+@media (max-width: 480px) {
+    #wrapper {
+        width: auto;
+    }
+
+    #content {
+        float: none;
+        width: auto;
+    }
+
+    /* #jb-content {
+      float: none;
+      width: auto;
+    }
+    #jb-sidebar {
+      float: none;
+      width: auto;
+    } */
 }

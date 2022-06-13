@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다채로움</title>
+    <link rel="stylesheet" href="../css/write.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <script type="text/javascript" src="../js/write.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div id="header">
+            <div id="logo-box">
+                <a href="index.html">
+                    <img id="logo" src="../../image/logo_small.png" />
+                </a>
+            </div>
+            <nav id="nav-box">
+                <ul>
+                    <li class="highlight"><a href="board.html">게시판</a></li>
+                    <li class="active">|</li>
+                    <li class="highlight"><a href="calendar.html">캘린더</a></li>
+                </ul>
+            </nav>
+            <nav id="signup-box">
+                <ul>
+                    <li><button type="button" class="trigger">로그인</button></li>
+                    <li>|</li>
+                    <li><a href="terms.html">회원가입</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- wrapper -->
+    <div id="wrapper">
+        <form action="#" method="post" name="write_post" target="_self" autocomplete="off">
+            <!-- content-->
+            <div id="content">
+
+                <h2 id="head">게시글 작성</h2>
+
+                <div class="title">
+                    <h3 class="write"><label for="title">게시글 제목</label></h3>
+                    <span class="box">
+                        <input type="text" id="post_title" />
+                    </span>
+                </div>
+
+                <div class="date">
+                    <h3 class="write"><label for="date">일시</label></h3>
+                    <span class="box">
+                        <input type="datetime-local" id="post_date" />
+                    </span>
+                </div>
+
+                <div class="sns">
+                    <h3 class="write"><label for="date">SNS 주소</label></h3>
+                    <span class="box">
+                        <input type="url" id="post_sns" />
+                    </span>
+                </div>
+
+                <div class="img">
+                    <h3 class="write"><label for="img">사진 추가</label></h3>
+                    <span class="box">
+                        <input type="file" id="post_img" accept=".png, .jpg, .jpeg" />
+                    </span>
+                </div>
+
+                <div class="text">
+                    <h3 class="write"><label for="text">게시글 내용</label></h3>
+                    <span class="box">
+                        <textarea id="post_text"></textarea>
+                    </span>
+                </div>
+
+                <input type="submit" id="btn" value="작성하기"/>
+            </div>
+        </form>
+    </div>
+
+    <!-- 모달(레이어 팝업) -->
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h1 class="modal_title">로그인</h1>
+            <form action="" method="POST" class="login-form">
+                <label></label>
+                <input type="text" name="userId" required />
+                <label></label>
+                <input type="password" name="userPw" required />
+                <label></label>
+                <input type="submit" id="submit-button" value="로그인" />
+            </form>
+            <div class="forget-content">
+                <a href="#" class="forget">비밀번호를 잊어버리셨나요?</a>
+            </div>
+            <div class="signup-content">
+                <span class="signup"><a href="terms.html">회원가입</a></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../js/modal.js"></script>
+<script>
+    document.getElementById('post_date').value= new Date().toISOString().slice(0, 16);
+</script>
+
+</html>

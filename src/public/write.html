@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>다채로움</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/write.css">
     <link rel="stylesheet" href="../css/modal.css">
     <script type="text/javascript" src="../js/write.js"></script>
@@ -25,6 +27,10 @@
                     <li class="highlight"><a href="board.html">게시판</a></li>
                     <li class="active">|</li>
                     <li class="highlight"><a href="calendar.html">캘린더</a></li>
+                    <li class="active">|</li>
+                    <li class="highlight"><a href="space_rental.html">공간대여</a></li>
+                    <li class="active">|</li>
+                    <li class="highlight"><a href="help_teacher.html">교사도움요청</a></li>
                 </ul>
             </nav>
             <nav id="signup-box">
@@ -80,7 +86,7 @@
                     </span>
                 </div>
 
-                <input type="submit" id="btn" value="작성하기"/>
+                <input type="submit" id="submit_button" value="작성하기"/>
             </div>
         </form>
     </div>
@@ -110,7 +116,7 @@
 
 <script type="text/javascript" src="../js/modal.js"></script>
 <script>
-    document.getElementById('post_date').value= new Date().toISOString().slice(0, 16);
+    document.getElementById('post_date').value = new Date().toISOString().slice(0, 16);
 </script>
 
 </html>

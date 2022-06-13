@@ -137,7 +137,7 @@ header>h1>span {
 
 /* content right */
 .content-right {
-  float: right;
+  float: left;
   box-sizing: border-box;
   width: 80%;
 }

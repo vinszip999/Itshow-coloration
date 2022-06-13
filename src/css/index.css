@@ -22,6 +22,11 @@
 
 /* header */
 #header {
+    z-index: 3; 
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
     width: 100%;
     height: 4rem;
     background-color: #205A8F;
@@ -162,7 +167,7 @@ a {
 
 #txt-box {
     margin: auto;
-    margin-top: 40vh;
+    margin-top: 45vh;
     float: left;
 }
 
@@ -180,7 +185,7 @@ a {
 }
 
 #header-content img {
-    margin-top: 15vh;
+    margin-top: 20vh;
     width: 450px;
     float: right;
 }

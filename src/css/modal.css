@@ -88,7 +88,7 @@ form {
     width: 459px;
 }
 
-input {
+.modal input {
     width: 439px;
     background-color: #efefef;
     border-radius: 6px;
@@ -99,7 +99,7 @@ input {
     color: #3a3a3a;
 }
 
-input:focus {
+.modal input:focus {
     border: 1px solid #97d6eb;
 }
 

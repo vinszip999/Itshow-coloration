@@ -174,3 +174,13 @@ body {
     color:#3a3a3a;
 }
 
+#wrapper input {
+    width: 100% !important;
+    background-color: #efefef;
+    border-radius: 6px;
+    border: 1px solid #dedede;
+    padding: 10px;
+    margin-top: 3px;
+    font-size: 0.9em;
+    color: #3a3a3a;
+}

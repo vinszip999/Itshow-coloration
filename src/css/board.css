@@ -22,6 +22,11 @@
 
 /* header */
 #header {
+    z-index: 3; 
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
     width: 100%;
     height: 4rem;
     background-color: #205A8F;
@@ -126,7 +131,7 @@ a {
 
 main {
     /* 위 | 오른쪽 | 아래 | 왼쪽 */
-    margin : 3vh 10vw 5vh 10vw;
+    margin : 10vh 10vw 5vh 10vw;
     font-family: 'GmarketSansMedium';
 }
 

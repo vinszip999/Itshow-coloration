@@ -15,7 +15,9 @@
     <header>
         <div id="header">
             <div id="logo-box">
-                <a href="index.html">로고</a>
+                <a href="index.html">
+                    <img id="logo" src="../../image/logo_small.png"/>
+                </a>
             </div>
             <nav id="nav-box">
                 <ul>
@@ -41,22 +43,32 @@
                 <td>
                     <div id="main">
                         <div id="main-content">
-                            <div id="title">샘플</div>
-                            <div id="date-area">
-                                <!-- put icon here -->
-                                일시
+
+                            <div id="post_title">
+                                샘플
                             </div>
-                            <div id="location-area">
-                                <!-- put icon here -->
-                                장소
+
+                            <div id="date">
+                                <span>일시</span>
+                                <span id="post_date">2022/06/20</span>
+                            </div>
+
+                            <div id="place">
+                                <span>SNS</span>
+                                <span id="post_sns">
+                                    <!-- 값 가져올 때,
+                                        <a href="링크" target="_blank">링크</a>
+                                        형태로 변환해서 가져오기
+                                    -->
+                                </span>
                             </div>
             
-                            <div id="image-area">
-                                <!-- show your image here -->
-                                예시 이미지
+                            <div id="post_img">
+                                
                             </div>
             
-                            <div id="context">
+            
+                            <div id="post_text">
                                 이 곳에는 글이 작성됩니다. <br>
                                 다채로움 웹페이지 샘플 문장입니다. <br>
                                 게시판 디테일 페이지에서는 글은 자동 중앙 정렬됩니다. <br>
@@ -64,23 +76,13 @@
                                 사용자들은 글을 보고 참여 신청을 할 수 있습니다.
                             </div>
             
-            
-                            <div id="hashtag">
-                                <!-- show your hashtag here -->
-                                <ul>
-                                    <li>#테스트</li>
-                                    <li>#해시태그</li>
-                                    <li>#취미</li>
-                                </ul>
-                            </div>
-            
                             <div id="line"></div>
             
-                            <div id="profile-box">
-                                <div id="profile-image">
+                            <div id="user_box">
+                                <div id="user_img">
                                     <!-- show your profile image -->
                                 </div>
-                                <div id="profile-name">
+                                <div id="post_user">
                                     <span id="name">김수진</span>님
                                 </div>
                             </div>
@@ -88,15 +90,15 @@
                     </div>
                 </td>
             </tr>
-            <tr>
-                <td>
-                    <button type="button" id="apply-button">신청하기</button>               
-                </td>
-            </tr>
         </table>  
     </main>
-
     
+    <footer>
+        <div id="footer">
+            <img src="../../image/logo_small.png" width="150px">
+			<p>이유빈/김미나/서민정/최지원</p>
+        </div>
+    </footer>
 
     <!-- 모달(레이어 팝업) -->
     <div class="modal">

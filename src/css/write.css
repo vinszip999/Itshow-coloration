@@ -126,98 +126,51 @@ a {
 
 body {
     font-family: 'GmarketSansLight';
-    background-color: #f3f3f3;
-}
-
-#main {
-    border-radius: 12px;
-    width: 100%;
     background-color: white;
-    padding: 30px;
 }
 
-#post_title {
-    font-family: 'GmarketSansMedium';
-    font-size: 20pt;
-    margin-bottom: 5px;
-}
-
-table {
+/* wrapper 지정 */
+#wrapper {
     width: 60%;
-    margin-left: auto; 
-    margin-right: auto;
-    padding: 20px 0px;
+    margin : 5vh auto 5vh auto;
     border-spacing: 0 20px;
 }
 
-#date, #place {
-    font-size:12pt;
-    margin-bottom:5px;
+#content > div {
+    /* 위 | 오른쪽 | 아래 | 왼쪽 */
+    margin : 0 0 3vh 0;
 }
 
-#post_img {
-    background-color: #f3f3f3;
-    width: 100%;
-    height:300px;
+#head {
+    color:#205A8F;
+    font-family: 'GmarketSansMedium';
+    font-weight: bold;
     text-align: center;
-    line-height: 300px;
-    margin-top:30px;
-    margin-bottom:30px;
+    margin-bottom: 30px;
 }
 
 #post_text {
-    text-align: center;
-    line-height: 20pt;
-    font-size:13pt;
-    margin-bottom:30px;
-}
-
-ul li {
-    display: inline;
-}
-
-#line {
-    background-color: #205A8F;
-    width: 40%;
-    height:2px;
-    margin:0 auto;
-    margin-bottom: 10px;
-}
-
-#user_img {
-    background-color: #f3f3f3;
-    width:70px;
-    height: 70px;
-    border-radius: 50%;
-    margin: 0 auto;
-    margin-bottom:10px;
-}
-
-#post_user {
-    text-align: center;
-}
-
-/* footer */
-#footer {
-    background-color: #575757;
-    height: 100px;
     width: 100%;
-    align-items: center;
-    clear: both;
-
+    height:30vh;
+    resize: none;
+    background-color: #efefef;
+    border-radius: 6px;
+    border: 1px solid #dedede;
+    padding: 10px;
+    margin-top: 3px;
+    font-size: 0.9em;
+    color: #3a3a3a;
 }
 
-#footer img {
+#btn {
+    cursor: pointer;
+    outline: none;
     width: 100px;
-    margin-top: 25px;
-    margin-left: 50px;
+    height: 35px;
+    border : 1px solid #a8a7a7;
+    border-radius: 8px;
+    font-family: 'GmarketSansMedium';
+    font-size: 12pt;
+    color:#3a3a3a;
 }
 
-#footer p {
-    color: white;
-    font-family: 'GmarketSansLight';
-    float: right;
-    font-size: 15px;
-    margin-top: 40px;
-    margin-right: 50px;
-}

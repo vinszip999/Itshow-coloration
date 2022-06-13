@@ -1,4 +1,4 @@
-/* basic setting */
+/* basic setting (웹브라우저 기본 여백 제거) */
 * {
     margin: 0;
     padding: 0;
@@ -148,56 +148,107 @@ a {
 /* main */
 #main {
     width: 100%;
-    color: #205A8F;
     font-family: 'GmarketSansMedium';
-    text-align: center;
 }
 
 #header-content {
-    height: 550px;
+    height: 90vh;
     clear: both;
     background-image: url('../../image/main-back.png');
     background-size: 100% 100%;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 #txt-box {
     margin: auto;
-    margin-top: 230px;
+    margin-top: 40vh;
     float: left;
 }
 
-#txt-main {
+#txt-box span:first-child {
     font-family: 'GmarketSansMedium';
+    color:#205A8F;
     font-size: 35px;
+    font-weight: 300;
 }
 
-#txt-gray {
+#txt-box span:last-child {
     font-family: 'GmarketSansMedium';
     color: #575757;
     font-size: 30px;
 }
 
 #header-content img {
-    margin-top: 50px;
+    margin-top: 15vh;
     width: 450px;
     float: right;
 }
 
-#section {
-    text-align: center;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    padding-left: 10px;
-    padding-right: 10px;
+#main-content {
+    /* 위 | 오른쪽 | 아래 | 왼쪽 */
+    margin : 10vh 10vw 10vh 10vw;
 }
 
-#main-content {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: center;
+.mc-1, .mc-2 {
+    margin: 0 0 5vh 0;
 }
+
+.count {
+    color:#393939;
+    font-size: 22pt;
+    font-weight: bold;
+}
+
+.content-area {
+    display: inline-block;
+}
+
+.content-area img {
+    width: 300px;
+}
+
+.mc-txt-box {
+    float: right;
+    text-align: left;
+}
+
+.title {
+    color:#393939;
+    font-size: 18pt;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.content {
+    color: #393939;
+    font-size: 12pt;
+}
+
+.mc-2 {
+    float: right;
+}
+
+.mc-2 .mc-txt-box {
+    float:left;
+}
+
+.mc-2 .count{
+    text-align: right;
+}
+
+.mc-2 .content {
+    text-align: right;
+}
+
+.mc-2 .title {
+    text-align: right;
+}
+
+.mc-3 {
+    clear:both;
+}
+
 
 #line {
     display: inline-block;

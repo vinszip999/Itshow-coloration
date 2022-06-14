@@ -67,9 +67,11 @@
         <span class="close-button">&times;</span>
         <h1 class="modal_title">일정 작성</h1>
         <form class="propmt-form" autocomplete="off">
-            <textarea class="input-box" autofocus></textarea>
-            <br>
-            <button type="submit" class="input-btn clickBtn">작성하기</button>
+          <!-- user_name을 넘겨줘서 아이템 모달에서 보여주기 -->
+          <input type="hidden" name="user_name" value=""/>
+          <textarea class="input-box" autofocus></textarea>
+          <br>
+          <button type="submit" class="input-btn clickBtn">작성하기</button>
         </form>
     </div>
   </div>

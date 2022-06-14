@@ -91,6 +91,8 @@ window.onload = function () {
     const mainDay = document.querySelector('.main-day');
     const mainDate = document.querySelector('.main-date');
     const dayList = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
+    // 하단에 목록 보여주는 곳에 있는 날짜에도 값을 삽입.
+    calendarMD.innerHTML = `${today.getMonth()+1}월 ${today.getDate()}일`;
     mainDay.innerHTML = dayList[today.getDay()];
     mainDate.innerHTML = today.getDate();
   }

@@ -21,7 +21,6 @@
 }
 
 body {
-    height:110vh;
     margin-top: 5vh;
     font-family: 'GmarketSansLight';
     background-color: #f3f3f3;
@@ -44,6 +43,7 @@ table {
     width: 50vw;
     margin-left: auto; 
     margin-right: auto;
+    margin-bottom:10vh;
     padding: 20px 0px;
     border-spacing: 30px;
 }

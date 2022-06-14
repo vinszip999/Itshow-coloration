@@ -19,6 +19,12 @@
     <main>
         <h1>도움 신청하기</h1>
 
+        <p>
+            당일 신청만 가능합니다. <br>
+            한계정 당 하루에 한 번만 신청할 수 있습니다. (중복 x) <br>
+            한 번 신청하면 수정이 불가능합니다. (신중하게 작성해주세요)
+        </p>
+
         <!-- 선생님 선택하기 -->
         <div id="teacher">
             <!-- <h4>선생님 성함을 입력하세요.</h4> -->
@@ -58,13 +64,14 @@
         <div id="time">
             <label for="label_time">시간 선택 : </label>
             <select id="select_time">
-                <option value="time9">오전 9:20 ~ 9:30 (1교시 쉬는시간)</option>
-                <option value="time10">오전 10:20 ~ 10:30 (2교시 쉬는시간)</option>
-                <option value="time11">오전 11:20 ~ 11:30 (3교시 쉬는시간)</option>
-                <option value="time12">오후 12:50 ~ 1:00 (4교시 쉬는시간)</option>
-                <option value="time2">오후 2:10 ~ 2:20 (5교시 쉬는시간)</option>
-                <option value="time3">오후 3:10 ~ 3:20 (6교시 쉬는시간)</option>
-                <option value="time4">오후 4:10 ~ 4:30 (7교시 쉬는시간)</option>
+                <option value="time1">오전 9:20 ~ 9:30 (1교시 쉬는시간)</option>
+                <option value="time2">오전 10:20 ~ 10:30 (2교시 쉬는시간)</option>
+                <option value="time3">오전 11:20 ~ 11:30 (3교시 쉬는시간)</option>
+                <option value="time4">오후 12:50 ~ 1:00 (점심시간1)</option>
+                <option value="time5">오후 1:00 ~ 1:15 (점심시간2)</option>
+                <option value="time6">오후 2:10 ~ 2:20 (5교시 쉬는시간)</option>
+                <option value="time7">오후 3:10 ~ 3:20 (6교시 쉬는시간)</option>
+                <option value="time8">오후 4:30 ~ 5:00 (방과후)</option>
             </select>
         </div>
 
@@ -86,17 +93,18 @@
         <!-- 사유 입력하기 -->
         <div class="reason">
             <!-- <h3 class="write"> -->
-                <label for="label_reason">사유 입력</label>
+            <label for="label_reason">사유 입력</label>
             <!-- </h3> -->
             <span class="span_reason">
-                <textarea id="text_reason" minlength="5" maxlength="50" placeholder="50글자 이내만 작성하세요."></textarea>
+                <textarea id="text_reason" minlength="5" maxlength="20" placeholder="20글자 이내만 작성하세요."></textarea>
             </span>
         </div>
 
 
         <!-- 신청 버튼 -->
         <div>
-            <input type="button" id="btn" value="신청하기" onclick="location.href='help_teacher_student.html'"/> <!--onclick="location.href='help_teacher_student.html'"-->
+            <input type="button" id="btn" value="신청하기" onclick="location.href='help_teacher_student.html'" />
+            <!--onclick="location.href='help_teacher_student.html'"-->
         </div>
 
         <script src="../js/help_teacher_writing.js"></script>

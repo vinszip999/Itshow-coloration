@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다채로움</title>
+    <link rel="stylesheet" href="../css/space_rental_admin.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <div id="logo-box">
+                <a href="index.html">
+                    <img id="logo" src="../../image/logo_small.png" />
+                </a>
+            </div>
+            <nav id="nav-box">
+                <ul>
+                    <li class="highlight"><a href="board.html">게시판</a></li>
+                    <li class="active">|</li>
+                    <li class="highlight"><a href="calendar.html">캘린더</a></li>
+                </ul>
+            </nav>
+            <nav id="signup-box">
+                <ul>
+                    <li><button type="button" class="trigger">로그인</button></li>
+                    <li>|</li>
+                    <li><a href="terms.html">회원가입</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div id="main">
+            <!-- <div class="container">
+                <div class="search-data">
+                    <span class="fas fa-search"></span>
+                    <input type="text" id="search-box" placeholder="검색">
+                    <div id="line"></div>
+                </div>
+                <div>
+                    <button type="button" id="write_btn" onclick="location.href='./write.html'">작성하기</button>
+                </div>
+            </div> -->
+            <div id="board_list">
+                <div class="item">
+                    <div class="post_img">
+                    </div>
+                    <div class="post_box">
+                        <p class="post_student">학생 : </p>
+                        <p class="post_space">공간 : </p>
+                        <p class="post_time">시간 : </p>
+                        <p class="post_number">인원 : </p>
+                        <p class="post_space">목적 : </p>
+                        <p class="check">
+                            <button type="submit">거절하기</button>
+                            <button type="submit">수락하기</button>
+                        </p>
+                    </div>
+                </div>
+                <!-- <div class="item">
+                    <div class="post_img">
+                    </div>
+                    <div class="post_box">
+                        <p class="post_title">샘플</p>
+                        <p class="post_date">일시</p>
+                        <p class="post_user">이름</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="post_img">
+                    </div>
+                    <div class="post_box">
+                        <p class="post_title">샘플</p>
+                        <p class="post_date">일시</p>
+                        <p class="post_user">이름</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="post_img">
+                    </div>
+                    <div class="post_box">
+                        <p class="post_title">샘플</p>
+                        <p class="post_date">일시</p>
+                        <p class="post_user">이름</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="post_img">
+                    </div>
+                    <div class="post_box">
+                        <p class="post_title">샘플</p>
+                        <p class="post_date">일시</p>
+                        <p class="post_user">이름</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="post_img">
+                    </div>
+                    <div class="post_box">
+                        <p class="post_title">샘플</p>
+                        <p class="post_date">일시</p>
+                        <p class="post_user">이름</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="post_img">
+                    </div>
+                    <div class="post_box">
+                        <p class="post_title">샘플</p>
+                        <p class="post_date">일시</p>
+                        <p class="post_user">이름</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="post_img">
+                    </div>
+                    <div class="post_box">
+                        <p class="post_title">샘플</p>
+                        <p class="post_date">일시</p>
+                        <p class="post_user">이름</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="post_img">
+                    </div>
+                    <div class="post_box">
+                        <p class="post_title">샘플</p>
+                        <p class="post_date">일시</p>
+                        <p class="post_user">이름</p>
+                    </div>
+                </div> -->
+            </div>
+    </main>
+
+    <!-- <footer>
+        <div id="footer">
+            <img src="../../image/logo_small.png" width="150px">
+			<p>이유빈/김미나/서민정/최지원</p>
+        </div>
+    </footer> -->
+
+    <!-- 모달(레이어 팝업) -->
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h1 class="modal_title">로그인</h1>
+            <form action="" method="POST" class="login-form">
+                <label></label>
+                <input type="text" name="userId" required />
+                <label></label>
+                <input type="password" name="userPw" required />
+                <label></label>
+                <input type="submit" id="submit-button" value="로그인"></input>
+            </form>
+            <div class="forget-content">
+                <a href="#" class="forget">비밀번호를 잊어버리셨나요?</a>
+            </div>
+            <div class="signup-content">
+                <span class="signup"><a href="terms.html">회원가입</a></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../js/modal.js"></script>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다채로움</title>
+
+    <link rel="stylesheet" href="../css/help_teacher_writing.css">
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+
+    <main>
+        <h1>도움 신청하기</h1>
+
+        <!-- 선생님 선택하기 -->
+        <div id="teacher">
+            <!-- <h4>선생님 성함을 입력하세요.</h4> -->
+            <form>
+                선생님 성함 입력 :
+                <input type="text" id="input_teacher" required minlength="1" maxlength="3" size="20"
+                    placeholder="3글자 이내만 입력하세요.">
+            </form>
+        </div>
+
+        <!-- <form action="/examples/media/action_target.php" method="get">
+            이름 : <input type="text" name="st_name"><br>
+            학번 : <input type="text" name="st_id"><br>
+            학과 : <input type="text" name="department"><br>
+            <input type="submit">
+        </form> -->
+
+
+        <!-- 분야 선택하기 -->
+        <div id="field">
+
+            <!-- <form>
+                분야 선택 : 
+                <input type="text" id="input_field" required minlength="1" maxlength="2" size="20" placeholder="3글자 이내만 입력하세요.">
+            </form> -->
+            <label for="label_field">분야 선택 : </label>
+            <select id="select_field">
+                <option value="development">개발</option>
+                <option value="design">디자인</option>
+                <option value="plan">기획</option>
+                <!-- <option value="watermelon" selected>수박</option> -->
+            </select>
+        </div>
+
+
+        <!-- 시간대 선택하기 -->
+        <div id="time">
+            <label for="label_time">시간 선택 : </label>
+            <select id="select_time">
+                <option value="time9">오전 9:20 ~ 9:30 (1교시 쉬는시간)</option>
+                <option value="time10">오전 10:20 ~ 10:30 (2교시 쉬는시간)</option>
+                <option value="time11">오전 11:20 ~ 11:30 (3교시 쉬는시간)</option>
+                <option value="time12">오후 12:50 ~ 1:00 (4교시 쉬는시간)</option>
+                <option value="time2">오후 2:10 ~ 2:20 (5교시 쉬는시간)</option>
+                <option value="time3">오후 3:10 ~ 3:20 (6교시 쉬는시간)</option>
+                <option value="time4">오후 4:10 ~ 4:30 (7교시 쉬는시간)</option>
+            </select>
+        </div>
+
+        <!-- <form>
+            <fieldset>
+                <textarea cols="10" rows="10"></textarea>
+            </fieldset>
+            <textarea rows = "10" cols = "100" name = "description">앱피아</textarea>
+        </form> -->
+
+        <!-- <div>
+            <textarea rows = "10" cols = "100" name = "description">앱피아</textarea>
+            <span class="box">
+                <textarea id="post_text"></textarea>
+            </span>
+        </div> -->
+
+
+        <!-- 사유 입력하기 -->
+        <div class="reason">
+            <!-- <h3 class="write"> -->
+                <label for="label_reason">사유 입력</label>
+            <!-- </h3> -->
+            <span class="span_reason">
+                <textarea id="text_reason" minlength="5" maxlength="50" placeholder="50글자 이내만 작성하세요."></textarea>
+            </span>
+        </div>
+
+
+        <!-- 신청 버튼 -->
+        <div>
+            <input type="button" id="btn" value="신청하기" onclick="location.href='help_teacher_student.html'"/> <!--onclick="location.href='help_teacher_student.html'"-->
+        </div>
+
+        <script src="../js/help_teacher_writing.js"></script>
+
+    </main>
+
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>

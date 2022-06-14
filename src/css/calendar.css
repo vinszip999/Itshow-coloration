@@ -344,6 +344,7 @@ header>h1>span {
   color: #fff;
 }
 
+/* 팝업 뒷 배경 블러 처리 */
 .bgblack {
   position: fixed;
   left: 0;
@@ -359,7 +360,6 @@ header>h1>span {
 
 /* calendar-detail */
 .calendar-detail {
-  /* 위 | 오른쪽 | 아래 | 왼쪽 */
   margin: 3vh 5vw 3vh 5vw;
 }
 

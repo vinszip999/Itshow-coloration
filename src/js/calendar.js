@@ -12,6 +12,7 @@ window.onload = function () {
   const createDate = document.querySelector('.createDate');
   const bgblack = document.querySelector('.bgblack');
   const closedBtn = document.querySelector('.closed');
+  const calendarMD = document.querySelector('.calendarMD');
   let currentDate;
 
 
@@ -30,7 +31,8 @@ window.onload = function () {
     } else {
       pageYear = notLeapYear;
     }
-    headerYear.innerHTML = `${monthList[firstDate.getMonth()]}&nbsp;&nbsp;&nbsp;&nbsp;${today.getFullYear()}`;
+    headerYear.innerHTML = `${today.getFullYear()}년&nbsp;&nbsp;&nbsp;&nbsp;${monthList[firstDate.getMonth()]}`;
+    calendarMD.innerHTML = `${today.getMonth()+1}월 ${today.getDay()}일`;
     makeElement(firstDate);
     showMain();
     currentDateget();
@@ -40,7 +42,7 @@ window.onload = function () {
   function showMain() {
     const mainDay = document.querySelector('.main-day');
     const mainDate = document.querySelector('.main-date');
-    const dayList = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const dayList = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
     mainDay.innerHTML = dayList[today.getDay()];
     mainDate.innerHTML = today.getDate();
   }
@@ -88,11 +90,14 @@ window.onload = function () {
   function showMain() {
     const mainDay = document.querySelector('.main-day');
     const mainDate = document.querySelector('.main-date');
-    const dayList = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const dayList = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
+    // 하단에 목록 보여주는 곳에 있는 날짜에도 값을 삽입.
+    calendarMD.innerHTML = `${today.getMonth()+1}월 ${today.getDate()}일`;
     mainDay.innerHTML = dayList[today.getDay()];
     mainDate.innerHTML = today.getDate();
   }
 
+  // 날짜 넘기기
   prevEl.addEventListener('click', function () {
     today = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
     removeCalendar();
@@ -113,6 +118,7 @@ window.onload = function () {
     currentDate = today.format();
   }
 
+  // 캘린더 요일 클릭 시 active 적용.
   calendarBody.addEventListener('click', function (e) {
     let target = e.target;
     let eachDate = document.querySelectorAll('.calendar-body > #weekly > div');
@@ -122,6 +128,8 @@ window.onload = function () {
     }
     target.classList.add('active');
     today = new Date(today.getFullYear(), today.getMonth(), target.innerHTML);
+    // 하단에 목록 보여주는 곳에 있는 날짜에도 값을 삽입.
+    calendarMD.innerHTML = `${today.getMonth()+1}월 ${today.getDate()}일`;
     showMain();
     currentDateget();
     redrawLi();
@@ -131,7 +139,12 @@ window.onload = function () {
   inputBtn.addEventListener('click', function (e) {
     e.preventDefault();
     let inputValue = inputBox.value;
-    insertTodo(inputValue);
+    // Todo의 입력칸이 빈칸이면은 값을 삽입하지 않도록 변경.
+    if (inputValue.replace(/(\s*)/g, "") != '') {
+      insertTodo(inputValue);
+      // 입력 후 모달 off
+      toggleModal();
+    }
   });
 
   function insertTodo(text) {
@@ -251,9 +264,7 @@ window.onload = function () {
 
 }
 
-
 // data 시작
-
 let DATA = {
   // todolist 목록 
 };
@@ -272,3 +283,16 @@ Date.prototype.format2 = function () { // 현재 날짜 보기좋게 출력 / �
   var format = [yyyy, month].join('-');
   return format;
 }
+
+// 모달을 띄우기 위한 코드
+let scheduleBtn = document.querySelector('.schedule-btn');
+let modal = document.querySelector(".modal");
+let closeButton = document.querySelector(".close-button");
+
+function toggleModal() {
+    // class를 이용한 모달 on/off
+    modal.classList.toggle("show-modal");
+}
+
+scheduleBtn.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);

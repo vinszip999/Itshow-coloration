@@ -1,23 +1,43 @@
 body {
-	margin:0;
-	padding:0;
-	font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
+
+/* web font */
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 li {
-	list-style:none;
+  list-style: none;
 }
+
 a {
-	text-decoration:none;
+  text-decoration: none;
 }
+
 table {
-	border-collapse: collapse
+  border-collapse: collapse
 }
+
 h1, h2, h3, h4, h5, h6, div, p, dl, dt, dd, ul, ol, li, form, fieldset, blockquote, address, table, thead, tbody, tfoot, tr, td, caption {
-	margin:0;
-	padding:0;
+  margin: 0;
+  padding: 0;
 }
-img { 
-	vertical-align: top;
+
+img {
+  vertical-align: top;
 }
 
 /* btn css */
@@ -36,7 +56,7 @@ img {
 header {
   border-bottom: 1px solid #e4e4e4;
   display: flex;
-  padding: 10px;
+  padding: 10px 10vw 10px 10vw;
   height: 7%;
   box-sizing: border-box;
 }
@@ -44,7 +64,15 @@ header {
 header>h1 {
   display: inline-block;
   height: 100%;
+  margin: 0 auto;
   flex-grow: 1;
+}
+
+header>h1>img {
+  cursor: pointer;
+  width: 30px;
+  margin-left: -8vw;
+  margin-top: 5pt;
 }
 
 .fa-calendar-check {
@@ -89,7 +117,6 @@ header>h1>span {
   float: left;
   box-sizing: border-box;
   width: 20%;
-  
 }
 
 .left-main {
@@ -125,7 +152,7 @@ header>h1>span {
   color: #5c5c5c;
 }
 
-.left-main .todo-wrap .input-form .input-box {
+.left-main .todo-wrap .schedule-form .input-box {
   width: 90%;
   height: 50px;
   font-size: 20px;
@@ -135,9 +162,19 @@ header>h1>span {
   outline-style: none;
 }
 
+.schedule-btn {
+  width: 150px;
+  background-color: #205A8F;
+  border-radius: 6pt;
+  padding: 5px; 
+  border: 1px solid #a8a7a7;
+  font-family: 'GmarketSansLight';
+  color: white;
+}
+
 /* content right */
 .content-right {
-  float: right;
+  float: left;
   box-sizing: border-box;
   width: 80%;
 }
@@ -172,7 +209,7 @@ header>h1>span {
   box-sizing: border-box;
   text-align: center;
   width: calc(100% / 7);
-  height: 130px;
+  height: 100px;
   display: inline-block;
   border-bottom: 1px solid #e4e4e4;
   vertical-align: top;
@@ -199,7 +236,7 @@ header>h1>span {
 
 /* todoList */
 .todoList {
-  margin-top: 10%;
+  margin-top: 5px;
   font-size: 20px;
 }
 
@@ -216,7 +253,7 @@ header>h1>span {
 }
 
 .todoList>li+li {
-  margin-top: 5%;
+  margin-top: 10px;
 }
 
 .todoList>li>.del-data {
@@ -304,16 +341,126 @@ header>h1>span {
   bottom: 7%;
   right: 7%;
   font-size: 20px;
-  color: #e4e4e4;
+  color: #fff;
 }
 
+/* 팝업 뒷 배경 블러 처리 */
 .bgblack {
-  display: none;
-  background: #acacac;
-  opacity: 0.6;
-  position: absolute;
+  position: fixed;
   left: 0;
-  right: 0;
   top: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.6;
+  display: none;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+/* calendar-detail */
+.calendar-detail {
+  margin: 3vh 5vw 3vh 5vw;
+}
+
+.calendar {
+  padding: 20px;
+  width: 100%;
+  border-radius: 12pt;
+  height:300px;
+  background-color: #f3f3f3;
+  text-align: center;
+  font-family: 'GmarketSansMedium';
+}
+
+.calendarMD {
+  color: #205A8F;
+  font-size: 16pt;
+}
+
+/* modal */
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 500px;
+  height: 360px;
+  border-radius: 0.5rem;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.modal_title {
+  font-family: 'GmarketSansMedium';
+  color: #205A8F;
+}
+
+.close-button {
+  position: fixed;
+  width: 3rem;
+  left:90%;
+  bottom:85%;
+  line-height: 3rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+form {
+  margin: 0 auto;
+  width: 460px;
+}
+
+.input-box {
+  height:240px;
+  width: 430px;
+  background-color: #efefef;
+  border-radius: 6px;
+  border: 1px solid #dedede;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+  color: #3a3a3a;
+  resize: none;
+}
+
+#input-box:focus {
+  border: 1px solid #97d6eb;
+}
+
+.input-btn {
+  width: 460px;
+  border-radius: 6pt;
+  padding: 5px; 
+  border: 1px solid #a8a7a7;
+  font-family: 'GmarketSansLight';
+  color: white;
+  background-color: #205A8F;
+}
+
+#input-btn:focus {
+  outline: none;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }

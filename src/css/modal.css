@@ -37,7 +37,6 @@
     border-bottom-right-radius: 0.5rem;
     text-align: center;
     font-size: 13pt;
-
     transform: translate(-50%, -50%);
 }
 
@@ -64,7 +63,6 @@
     text-decoration: underline;
 }
 
-
 label {
     display: block;
     margin-top: 10px;
@@ -80,7 +78,6 @@ label {
     text-align: center;
     cursor: pointer;
     border-radius: 0.25rem;
-
 }
 
 form {
@@ -88,8 +85,8 @@ form {
     width: 459px;
 }
 
-input {
-    width: 439px;
+.modal input {
+    width: 440px;
     background-color: #efefef;
     border-radius: 6px;
     border: 1px solid #dedede;
@@ -99,7 +96,7 @@ input {
     color: #3a3a3a;
 }
 
-input:focus {
+.modal input:focus {
     border: 1px solid #97d6eb;
 }
 

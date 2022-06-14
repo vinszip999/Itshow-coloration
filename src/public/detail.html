@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>다채로움</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/detail.css">
     <link rel="stylesheet" href="../css/modal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -13,7 +15,7 @@
 
 <body>
     <header>
-        <div id="header">
+        <div id="header">     
             <div id="logo-box">
                 <a href="index.html">
                     <img id="logo" src="../../image/logo_small.png"/>
@@ -24,6 +26,10 @@
                     <li class="highlight"><a href="board.html">게시판</a></li>
                     <li class="active">|</li>
                     <li class="highlight"><a href="calendar.html">캘린더</a></li>
+                    <li class="active">|</li>
+                    <li class="highlight"><a href="space_rental.html">공간대여</a></li>
+                    <li class="active">|</li>
+                    <li class="highlight"><a href="help_teacher.html">교사도움요청</a></li>
                 </ul>
             </nav>
             <nav id="signup-box">
@@ -36,62 +42,55 @@
         </div>
     </header>
 
-
-    <main>
-        <table>
-            <tr>
-                <td>
-                    <div id="main">
-                        <div id="main-content">
-
-                            <div id="post_title">
-                                샘플
+    <table>
+        <tr>
+            <td>
+                <div id="main">
+                    <div id="main-content">
+                        <div id="post_title">
+                            샘플
+                        </div>
+                        <div id="date">
+                            <span>일시</span>
+                            <span id="post_date">2022/06/20</span>
+                        </div>
+                        <div id="place">
+                            <span>SNS</span>
+                            <span id="post_sns">
+                                <!-- 값 가져올 때,
+                                    <a href="링크" target="_blank">링크</a>
+                                    형태로 변환해서 가져오기
+                                -->
+                            </span>
+                        </div>
+                        <div id="post_img"></div>    
+                        <div id="post_text">
+                            이 곳에는 글이 작성됩니다. <br>
+                            다채로움 웹페이지 샘플 문장입니다. <br>
+                            게시판 디테일 페이지에서는 글은 자동 중앙 정렬됩니다. <br>
+                            작성자는 이 detail 페이지에서 글을 수정할 수 있습니다. <br>
+                            사용자들은 글을 보고 참여 신청을 할 수 있습니다.
+                        </div>
+                        <div id="line"></div>
+                        <div id="user_box">
+                            <div id="user_img">
+                                <!-- show your profile image -->
                             </div>
-
-                            <div id="date">
-                                <span>일시</span>
-                                <span id="post_date">2022/06/20</span>
-                            </div>
-
-                            <div id="place">
-                                <span>SNS</span>
-                                <span id="post_sns">
-                                    <!-- 값 가져올 때,
-                                        <a href="링크" target="_blank">링크</a>
-                                        형태로 변환해서 가져오기
-                                    -->
-                                </span>
-                            </div>
-            
-                            <div id="post_img">
-                                
-                            </div>
-            
-            
-                            <div id="post_text">
-                                이 곳에는 글이 작성됩니다. <br>
-                                다채로움 웹페이지 샘플 문장입니다. <br>
-                                게시판 디테일 페이지에서는 글은 자동 중앙 정렬됩니다. <br>
-                                작성자는 이 detail 페이지에서 글을 수정할 수 있습니다. <br>
-                                사용자들은 글을 보고 참여 신청을 할 수 있습니다.
-                            </div>
-            
-                            <div id="line"></div>
-            
-                            <div id="user_box">
-                                <div id="user_img">
-                                    <!-- show your profile image -->
-                                </div>
-                                <div id="post_user">
-                                    <span id="name">김수진</span>님
-                                </div>
+                            <div id="post_user">
+                                <span id="name">학번_이름</span>
                             </div>
                         </div>
                     </div>
-                </td>
-            </tr>
-        </table>  
-    </main>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- 자신이 작성한 게시글만 수정할 수 있도록 하기 -->
+                <button type="button" id="edit_button" onclick="location.href='detail_edit.html'">수정하기</button>
+            </td>
+        </tr>
+    </table>  
     
     <footer>
         <div id="footer">
@@ -105,7 +104,7 @@
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <h1 class="title">로그인</h1>
-            <form action="" method="POST" class="login-form">
+            <form action="" method="POST" class="login-form" autocomplete="off">
                 <label></label>
                 <input type="text" name="userId" required />
                 <label></label>

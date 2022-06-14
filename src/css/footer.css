@@ -1,0 +1,37 @@
+/* footer */
+html {
+    position: relative;
+    min-height: 100%;
+    margin: 0px;
+}
+
+body {
+    min-height: 100%;
+}
+
+#footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #575757;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    clear: both;
+}
+
+#footer img {
+    width: 100px;
+    margin-top: 25px;
+    margin-left: 50px;
+}
+
+#footer p {
+    color: white;
+    font-family: 'GmarketSansLight';
+    float: right;
+    font-size: 15px;
+    margin-top: 40px;
+    margin-right: 50px;
+}

@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>다채로움</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/modal.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -52,12 +54,15 @@
                     <li class="highlight"><a href="board.html">게시판</a></li>
                     <li class="active">|</li>
                     <li class="highlight"><a href="calendar.html">캘린더</a></li>
+                    <li class="active">|</li>
+                    <li class="highlight"><a href="space_rental_student.html">공간대여</a></li>
+                    <li class="active">|</li>
+                    <li class="highlight"><a href="help_teacher_student.html">교사도움요청</a></li>
                 </ul>
             </nav>
             <div id="input-box">
                 <input type="text" name="search" id="search">
-                <i class="fa fa-search"></i>
-
+                <img src="../../image/search.png" id="search_icon"/>
             </div>
             <nav id="signup-box">
                 <ul>
@@ -150,7 +155,7 @@
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <h1 class="modal_title">로그인</h1>
-            <form action="" method="post" class="login-form">
+            <form action="" method="post" class="login-form" autocomplete="off">
                 <label></label>
                 <input type="text" name="userId" required />
                 <label></label>

@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>다채로움</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/board.css">
     <link rel="stylesheet" href="../css/modal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -24,6 +26,10 @@
                     <li class="highlight"><a href="board.html">게시판</a></li>
                     <li class="active">|</li>
                     <li class="highlight"><a href="calendar.html">캘린더</a></li>
+                    <li class="active">|</li>
+                    <li class="highlight"><a href="space_rental.html">공간대여</a></li>
+                    <li class="active">|</li>
+                    <li class="highlight"><a href="help_teacher.html">교사도움요청</a></li>
                 </ul>
             </nav>
             <nav id="signup-box">
@@ -49,7 +55,7 @@
                 </div>
             </div>
             <div id="board_list">
-                <div class="item">
+                <div class="item" onclick="location.href='detail.html'">
                     <div class="post_img">
                     </div>
                     <div class="post_box">
@@ -145,7 +151,7 @@
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <h1 class="modal_title">로그인</h1>
-            <form action="" method="POST" class="login-form">
+            <form action="" method="POST" class="login-form" autocomplete="off">
                 <label></label>
                 <input type="text" name="userId" required />
                 <label></label>

@@ -193,7 +193,7 @@ a {
 
 #txt-box {
     margin: auto;
-    margin-top: 40vh;
+    margin-top: 45vh;
     float: left;
 }
 
@@ -211,14 +211,19 @@ a {
 }
 
 #header-content img {
-    margin-top: 15vh;
+    margin-top: 20vh;
     width: 450px;
     float: right;
 }
 
 #main-content {
     /* 위 | 오른쪽 | 아래 | 왼쪽 */
-    margin: 10vh 10vw 10vh 10vw;
+    margin : 10vh 10vw 15vh 10vw;
+}
+
+#mypage_logo {
+    margin-top: 5pt;
+/*     margin: 10vh 10vw 10vh 10vw; */
 }
 
 .mc-1,
@@ -281,7 +286,6 @@ a {
     clear: both;
 }
 
-
 #line {
     display: inline-block;
     background-color: #205A8F;
@@ -293,27 +297,3 @@ a {
     transform: translate(-50%, -50%);
 }
 
-/* footer */
-#footer {
-    background-color: #575757;
-    height: 100px;
-    width: 100%;
-    align-items: center;
-    clear: both;
-
-}
-
-#footer img {
-    width: 100px;
-    margin-top: 25px;
-    margin-left: 50px;
-}
-
-#footer p {
-    color: white;
-    font-family: 'GmarketSansLight';
-    float: right;
-    font-size: 15px;
-    margin-top: 40px;
-    margin-right: 50px;
-}

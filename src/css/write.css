@@ -28,7 +28,7 @@ body {
 /* wrapper 지정 */
 #wrapper {
     width: 60%;
-    margin : 5vh auto 5vh auto;
+    margin : 10vh auto 5vh auto;
     border-spacing: 0 20px;
 }
 

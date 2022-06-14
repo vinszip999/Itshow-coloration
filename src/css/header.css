@@ -48,6 +48,13 @@
 
 }
 
+#search_icon {
+    position: fixed;
+    width: 25px;
+    right:95px;
+    top:20px;
+}
+
 #logo {
     height: 50px;
 }
@@ -55,7 +62,7 @@
 #search:focus {
     outline: none;
     padding: 9px;
-    border: 1px solid #FFD23B;
+    border: 1px solid gray;
 }
 
 ul li {

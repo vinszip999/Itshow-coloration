@@ -13,6 +13,10 @@ main {
     height: 90vh;
 }
 
+#nav-box ul {
+    padding:0;
+}
+
 #nav-ul {
     padding:0px;
 }
@@ -145,26 +149,21 @@ main {
 /* h1 {
     color: #205A8F;
 }
-
 li {
     list-style: none;
 }
-
 img {
     width: 200px;
     height: 200px;
 }
-
 .real-upload {
     display: none;
 }
-
 .upload {
     width: 200px;
     height: 200px;
     background-color: antiquewhite;
 }
-
 .image-preview {
     width: 1300px;
     height: 200px;
@@ -172,51 +171,42 @@ img {
     display: flex;
     gap: 20px;
 }
-
 /* 
 html {
     height: 100%;
 }
-
 body {
     font-family: sans-serif;
     height: 100%;
     margin: 0;
 }
-
 .container {
     display: flex;
     height: 100%;
     flex-direction: column;
 }
-
 .image-upload {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 .button {
     display: flex;
     justify-content: center;
 }
-
 label {
     cursor: pointer;
     font-size: 1em;
 }
-
 #chooseFile {
     visibility: hidden;
 }
-
 .fileContainer {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .fileInput {
     display: flex;
     align-items: center;
@@ -224,11 +214,9 @@ label {
     width: 60%;
     height: 30px;
 }
-
 #fileName {
     margin-left: 5px;
 }
-
 .buttonContainer {
     width: 15%;
     display: flex;
@@ -240,10 +228,8 @@ label {
     border-radius: 30px;
     padding: 10px;
     font-size: 0.8em;
-
     cursor: pointer;
 }
-
 .image-show {
     z-index: -1;
     display: flex;
@@ -253,20 +239,10 @@ label {
     width: 100%;
     height: 100%;
 }
-
 .img {
     position: absolute;
 } */
 
-/* basic setting */
-
-
-
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
 
 /* web font */
 @font-face {

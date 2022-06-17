@@ -15,10 +15,10 @@
 
 <body>
     <header>
-        <div id="header">     
+        <div id="header">
             <div id="logo-box">
                 <a href="index.html">
-                    <img id="logo" src="../../image/logo_small.png"/>
+                    <img id="logo" src="../../image/logo_small.png" />
                 </a>
             </div>
             <nav id="nav-box">
@@ -45,11 +45,26 @@
     <main>
         <div id="main">
             <div class="container">
-                <div class="search-data">
-                    <span class="fas fa-search"></span>
-                    <input type="text" id="search-box" placeholder="검색">
-                    <div id="line"></div>
-                </div>
+                <ul class="search">
+                    <li>
+                        <div class="searchs">
+                            <span class="fas fa-search"></span>
+                            <input type="text" id="search-box" placeholder="검색">
+                            <div id="line"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="category">
+                            <select name="category">
+                                <option value="" selected>전체</option>
+                                <option value="competition">공모전</option>
+                                <option value="study">스터디</option>
+                                <option value="hobby">취미</option>
+                                <option value="etc">기타</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
                 <div>
                     <button type="button" id="write_btn" onclick="location.href='./write.html'">작성하기</button>
                 </div>
@@ -136,13 +151,13 @@
                         <p class="post_user">이름</p>
                     </div>
                 </div>
-        </div>
+            </div>
     </main>
 
     <footer>
         <div id="footer">
             <img src="../../image/logo_small.png" width="150px">
-			<p>이유빈/김미나/서민정/최지원</p>
+            <p>이유빈/김미나/서민정/최지원</p>
         </div>
     </footer>
 

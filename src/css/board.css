@@ -22,7 +22,7 @@
 
 main {
     /* 위 | 오른쪽 | 아래 | 왼쪽 */
-    margin : 10vh 10vw 15vh 10vw;
+    margin : 12vh 10vw 17vh 10vw;
     font-family: 'GmarketSansMedium';
 }
 
@@ -32,6 +32,30 @@ main {
     justify-content: space-between;
 }
 
+.search {
+    display: flex;
+}
+
+.searchs {
+    margin-top: 5px;
+}
+
+/* IE 10, 11의 네이티브 화살표 숨기기 */
+select::-ms-expand { 
+    display: none;
+}
+
+select {
+    width: 100px; /* 원하는 너비설정 */
+    padding: .8em .5em; /* 여백으로 높이 설정 */
+    font-family: inherit;  /* 폰트 상속 */
+    background: url('../../image/angle-small-down.png') no-repeat 95% 50%;  /* 화살표 모양의 이미지 */ 
+    border: 1px solid #999; 
+    border-radius: 0px; /* iOS 둥근모서리 제거 */
+    -webkit-appearance: none; /* 네이티브 외형 감추기 */
+    -moz-appearance: none;
+    appearance: none;
+}
 
 #search-box {
     background-color: #fff;
@@ -57,6 +81,11 @@ main {
     font-family: 'GmarketSansMedium';
     font-size: 12pt;
     color:#3a3a3a;
+}
+
+#category {
+    position: fixed;
+    left:30px;
 }
 
 #board_list {

@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>다채로움</title>
-    <link rel="stylesheet" href="../css/space_rental_student.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/space_rental_student.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
@@ -16,7 +19,7 @@
         <div id="header">
             <div id="logo-box">
                 <a href="index.html">
-                    <img id="logo" src="../../image/logo_small.png" />
+                    <img id="logo" src="../../image/logo_small.png"/>
                 </a>
             </div>
             <nav id="nav-box">
@@ -24,13 +27,26 @@
                     <li class="highlight"><a href="board.html">게시판</a></li>
                     <li class="active">|</li>
                     <li class="highlight"><a href="calendar.html">캘린더</a></li>
+                    <li class="active">|</li>
+                    <li class="highlight"><a href="space_rental_student.html">공간대여</a></li>
+                    <li class="active">|</li>
+                    <li class="highlight"><a href="help_teacher_student.html">교사도움요청</a></li>
                 </ul>
             </nav>
+            <div id="input-box">
+                <input type="text" name="search" id="search">
+                <img src="../../image/search.png" id="search_icon"/>
+            </div>
             <nav id="signup-box">
                 <ul>
-                    <li><button type="button" class="trigger">로그인</button></li>
-                    <li>|</li>
-                    <li><a href="terms.html">회원가입</a></li>
+                    <li>
+                        <button type="button" class="trigger" onclick="location.href='mypage.html'">
+                        <div id="mypage">
+                            <!-- <img id="mypage_logo" src="../../image/mypage.png"> -->
+                            <img id="mypage_logo" src="../../image/mypage.png">
+                        </div>
+                        </button>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -66,12 +82,12 @@
             </div>
     </main>
 
-    <!-- <footer>
+    <footer>
         <div id="footer">
             <img src="../../image/logo_small.png" width="150px">
-			<p>이유빈/김미나/서민정/최지원</p>
+			<p>이유빈/최지원/김미나/서민정</p>
         </div>
-    </footer> -->
+    </footer>
 
     <!-- 모달(레이어 팝업) -->
     <div class="modal">

@@ -53,10 +53,11 @@
 } */
 
 #mypage {
-    width: 50px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 70%;
     overflow: hidden;
+    margin-top: 6.5px;
 }
 
 #mypage_logo {
@@ -194,7 +195,7 @@ a {
 
 #txt-box {
     margin: auto;
-    margin-top: 45vh;
+    margin-top: 43vh;
     float: left;
 }
 
@@ -223,7 +224,7 @@ a {
 }
 
 #mypage_logo {
-    margin-top: 5pt;
+    margin-top: 0pt;
     /* margin: 10vh 10vw 10vh 10vw; */
 }
 

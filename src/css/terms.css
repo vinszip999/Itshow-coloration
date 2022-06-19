@@ -1,5 +1,26 @@
+/* web font */
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 본문 드래그, 우클릭 금지 */
 * {
   box-sizing: border-box;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
 }
 
 html, body {
@@ -32,14 +53,12 @@ ul {
 .wrap .logo {
   text-align: center;
   margin-bottom: 10px;
-}
-
-.wrap .logo h1 {
-  margin: 0;
-  font-size: 50px;
+  font-size: 16px;
+  font-family: 'GmarketSansMedium';
 }
 
 .wrap .contents {
+  font-family: 'GmarketSansLight';
   padding: 50px;
   background-color: #ffffff;
   border: 1px solid #dadada;
@@ -111,7 +130,15 @@ label.required::after {
   cursor: not-allowed;
 }
 
-@media (max-width: 768px) {
+/* check 박스와 해당 텍스트 위치에 마우스가 있을 시 커서 변경 */
+input[type='checkbox'],
+.contents label {
+  cursor: pointer;
+}
+
+/* 모바일 반응형 */
+@media screen and (max-width:768px) {
+  
   .wrap {
     min-width: 280px;
     padding: 20px;
@@ -121,4 +148,5 @@ label.required::after {
     max-width: 460px;
     width: auto;
   }
+
 }

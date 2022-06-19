@@ -478,15 +478,8 @@ header>h1>span {
     display: none;
   }
 
-  .calendar-detail {
-    position: relative;
-  }
-
   .schedule-btn-m {
-    position: absolute;
-    left:50%;
-    top:7%;
-    transform: translate(100%, -50%);
+    margin: auto;
     display: block;
   }
   
@@ -504,7 +497,7 @@ header>h1>span {
   }
   
   .content-right .day-of-week .dayHeader {
-    width: calc(100% / 8);
+    width: calc(100% / 7.5);
   }
   
   #weekly>div {
@@ -513,9 +506,9 @@ header>h1>span {
 
   .calendar {
     padding: 20px;
-    margin-top: 5vh;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
     width: 85%;
     border-radius: 12pt;
     height:300px;

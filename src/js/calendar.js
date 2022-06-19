@@ -1,3 +1,8 @@
+const monthList = ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'];
+const leapYear = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+const notLeapYear = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+const dayList = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
+
 window.onload = function () {
 
   let today = new Date();
@@ -20,9 +25,6 @@ window.onload = function () {
 
   function buildCalendar() {
     let firstDate = new Date(today.getFullYear(), today.getMonth(), 1);
-    const monthList = ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'];
-    const leapYear = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-    const notLeapYear = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
     const headerYear = document.querySelector('.current-year-month');
 
     // 윤년 체크하기
@@ -32,7 +34,7 @@ window.onload = function () {
       pageYear = notLeapYear;
     }
     headerYear.innerHTML = `${today.getFullYear()}년&nbsp;&nbsp;&nbsp;&nbsp;${monthList[firstDate.getMonth()]}`;
-    calendarMD.innerHTML = `${today.getMonth()+1}월 ${today.getDay()}일`;
+    calendarMD.innerHTML = `${today.getMonth()+1}월 ${today.getDay()}일 ${dayList[today.getDay()]}`;
     makeElement(firstDate);
     showMain();
     currentDateget();
@@ -42,7 +44,6 @@ window.onload = function () {
   function showMain() {
     const mainDay = document.querySelector('.main-day');
     const mainDate = document.querySelector('.main-date');
-    const dayList = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
     mainDay.innerHTML = dayList[today.getDay()];
     mainDate.innerHTML = today.getDate();
   }
@@ -90,9 +91,8 @@ window.onload = function () {
   function showMain() {
     const mainDay = document.querySelector('.main-day');
     const mainDate = document.querySelector('.main-date');
-    const dayList = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
     // 하단에 목록 보여주는 곳에 있는 날짜에도 값을 삽입.
-    calendarMD.innerHTML = `${today.getMonth()+1}월 ${today.getDate()}일`;
+    calendarMD.innerHTML = `${today.getMonth()+1}월 ${today.getDate()}일 ${dayList[today.getDay()]}`;
     mainDay.innerHTML = dayList[today.getDay()];
     mainDate.innerHTML = today.getDate();
   }
@@ -286,6 +286,7 @@ Date.prototype.format2 = function () { // 현재 날짜 보기좋게 출력 / �
 
 // 모달을 띄우기 위한 코드
 let scheduleBtn = document.querySelector('.schedule-btn');
+let scheduleBtnM = document.querySelector('.schedule-btn-m');
 let modal = document.querySelector(".modal");
 let closeButton = document.querySelector(".close-button");
 
@@ -295,4 +296,5 @@ function toggleModal() {
 }
 
 scheduleBtn.addEventListener("click", toggleModal);
+scheduleBtnM.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);

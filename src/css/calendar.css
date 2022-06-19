@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'GmarketSansLight';
 }
 
 /* web font */
@@ -28,7 +28,7 @@ a {
 }
 
 table {
-  border-collapse: collapse
+  border-collapse: collapse;
 }
 
 h1, h2, h3, h4, h5, h6, div, p, dl, dt, dd, ul, ol, li, form, fieldset, blockquote, address, table, thead, tbody, tfoot, tr, td, caption {
@@ -59,6 +59,7 @@ header {
   padding: 10px 10vw 10px 10vw;
   height: 7%;
   box-sizing: border-box;
+  font-family: 'GmarketSansMedium';
 }
 
 header>h1 {
@@ -120,8 +121,9 @@ header>h1>span {
 }
 
 .left-main {
+  position: relative;
+  transform: translate(0, 20vh);
   border-radius: 50px;
-  margin-top: 20%;
 }
 
 .left-main .main-wrap {
@@ -162,7 +164,7 @@ header>h1>span {
   outline-style: none;
 }
 
-.schedule-btn {
+.schedule-btn, .schedule-btn-m {
   width: 150px;
   background-color: #205A8F;
   border-radius: 6pt;
@@ -373,7 +375,7 @@ header>h1>span {
   font-family: 'GmarketSansMedium';
 }
 
-.calendarMD {
+.calendarMD, .calendarMD-m {
   color: #205A8F;
   font-size: 16pt;
 }
@@ -396,13 +398,13 @@ header>h1>span {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   background-color: white;
   padding: 1rem 1.5rem;
   width: 500px;
   height: 360px;
   border-radius: 0.5rem;
   text-align: center;
-  transform: translate(-50%, -50%);
 }
 
 .modal_title {
@@ -419,11 +421,6 @@ header>h1>span {
   text-align: center;
   cursor: pointer;
   border-radius: 0.25rem;
-}
-
-form {
-  margin: 0 auto;
-  width: 460px;
 }
 
 .input-box {
@@ -448,6 +445,7 @@ form {
   width: 460px;
   border-radius: 6pt;
   padding: 5px; 
+  margin:0px;
   border: 1px solid #a8a7a7;
   font-family: 'GmarketSansLight';
   color: white;
@@ -463,4 +461,79 @@ form {
   visibility: visible;
   transform: scale(1.0);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.schedule-btn {
+  display: inline;
+}
+
+.schedule-btn-m {
+  display: none;
+}
+
+/* 모바일 반응형 */
+@media screen and (max-width:768px) {
+
+  .content-left {
+    display: none;
+  }
+
+  .calendar-detail {
+    position: relative;
+  }
+
+  .schedule-btn-m {
+    position: absolute;
+    left:50%;
+    top:7%;
+    transform: translate(100%, -50%);
+    display: block;
+  }
+  
+  header>h1>img {
+    width: 25px;
+    margin-left:-6vw;
+  }
+  
+  header>h1>span {
+    font-size: 18px;
+  }
+
+  .content-right {
+    width: 100%;
+  }
+  
+  .content-right .day-of-week .dayHeader {
+    width: calc(100% / 8);
+  }
+  
+  #weekly>div {
+    height: 60px;
+  }
+
+  .calendar {
+    padding: 20px;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    border-radius: 12pt;
+    height:300px;
+    background-color: #f3f3f3;
+    font-family: 'GmarketSansMedium';
+  }
+
+  .modal-content {
+    width: 400px;
+    height: 360px;
+  }
+
+  .input-box {
+    width: 340px;
+  }
+
+  .input-btn {
+    width: 365px;
+  }
+
 }

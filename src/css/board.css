@@ -2,8 +2,12 @@
 * {
     margin: 0;
     padding: 0;
+}
+
+*:not(.modal):not(.modal_content):not(.signup_content):not(.login_form input) {
     box-sizing: border-box;
 }
+
 
 /* web font */
 @font-face {
@@ -21,53 +25,73 @@
 }
 
 main {
-    /* 위 | 오른쪽 | 아래 | 왼쪽 */
-    margin : 12vh 10vw 17vh 10vw;
+    margin: 10vh 10vw 17vh 10vw;
     font-family: 'GmarketSansMedium';
-}
-
-.container {
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .search {
     display: flex;
+    justify-content: space-between;
 }
 
 .searchs {
     margin-top: 5px;
 }
 
+.searchs input[type='text'] {
+    margin-left: 20px;
+    width: 330px;
+}
+
+.search li:first-child {
+    display: flex;
+}
+
+.categorys {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
 /* IE 10, 11의 네이티브 화살표 숨기기 */
-select::-ms-expand { 
+select::-ms-expand {
     display: none;
 }
 
 select {
-    width: 100px; /* 원하는 너비설정 */
-    padding: .8em .5em; /* 여백으로 높이 설정 */
-    font-family: inherit;  /* 폰트 상속 */
-    background: url('../../image/angle-small-down.png') no-repeat 95% 50%;  /* 화살표 모양의 이미지 */ 
-    border: 1px solid #999; 
-    border-radius: 0px; /* iOS 둥근모서리 제거 */
-    -webkit-appearance: none; /* 네이티브 외형 감추기 */
+    width: 80px;
+    /* 원하는 너비설정 */
+    padding: .8em .5em;
+    /* 여백으로 높이 설정 */
+    font-family: inherit;
+    /* 폰트 상속 */
+    background: url('../../image/angle-small-down.png') no-repeat 95% 50%;
+    /* 화살표 모양의 이미지 */
+    border: 1px solid #999;
+    border-radius: 0px;
+    /* iOS 둥근모서리 제거 */
+    -webkit-appearance: none;
+    /* 네이티브 외형 감추기 */
     -moz-appearance: none;
     appearance: none;
 }
 
 #search-box {
     background-color: #fff;
-    border:none;
+    border: none;
     outline: none;
     font-size: 15pt;
     font-family: 'GmarketSansLight';
 }
 
+#search-img {
+    position: absolute;
+    top: 12vh;
+    width: 20px;
+}
+
 #line {
     height: 2px;
-    width: 25rem;
+    width: 350px;
     background-color: #a8a7a7;
 }
 
@@ -76,16 +100,11 @@ select {
     outline: none;
     width: 100px;
     height: 35px;
-    border : 1px solid #a8a7a7;
+    border: 1px solid #a8a7a7;
     border-radius: 8px;
     font-family: 'GmarketSansMedium';
     font-size: 12pt;
-    color:#3a3a3a;
-}
-
-#category {
-    position: fixed;
-    left:30px;
+    color: #3a3a3a;
 }
 
 #board_list {
@@ -93,30 +112,29 @@ select {
     grid-template-columns: repeat(auto-fill, minmax(310px, auto));
     margin-top: 50px;
     column-gap: 30px;
-	row-gap: 30px;
+    row-gap: 30px;
     justify-content: center;
-}  
+}
 
 .item {
     cursor: pointer;
-    width:300px;
-    height:250px;
+    width: 300px;
+    height: 250px;
     background-color: #a8a7a7;
     border-radius: 12px;
-    border:1px solid #dedede;
+    border: 1px solid #a8a7a7;
 }
 
 .post_img {
-    width:100%;
-    height:60%;
+    width: 100%;
+    height: 60%;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     background-color: #a8a7a7;
 }
 
 .post_box {
-    padding:10px;
-    width:100%;
+    padding: 10px;
     height:40%;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
@@ -135,4 +153,102 @@ select {
 
 .post_user {
     font-size: 12pt;
+}
+
+/* 모바일 반응형 */
+@media screen and (max-width:770px) {
+
+    main {
+        margin: 10vh 10vw 15vh 10vw;
+        font-family: 'GmarketSansMedium';
+    }
+
+    .container {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* 버튼과 검색창의 flex 제거 */
+    .search {
+        display: block;
+    }
+
+    .searchs {
+        margin-top: 5px;
+    }
+
+    .searchs input[type='text'] {
+        width: 230px;
+    }
+
+    .search li:first-child {
+        display: flex;
+    }
+
+    .categorys {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    /* IE 10, 11의 네이티브 화살표 숨기기 */
+    select::-ms-expand {
+        display: none;
+    }
+
+    select {
+        width: 80px;
+        /* 원하는 너비설정 */
+        padding: .8em .5em;
+        /* 여백으로 높이 설정 */
+        font-family: inherit;
+        /* 폰트 상속 */
+        background: url('../../image/angle-small-down.png') no-repeat 95% 50%;
+        /* 화살표 모양의 이미지 */
+        border: 1px solid #999;
+        border-radius: 0px;
+        /* iOS 둥근모서리 제거 */
+        -webkit-appearance: none;
+        /* 네이티브 외형 감추기 */
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    #search-box {
+        background-color: #fff;
+        border: none;
+        outline: none;
+        font-size: 12pt;
+        font-family: 'GmarketSansLight';
+    }
+
+    #search-img {
+        width: 18px;
+    }
+
+    #line {
+        width: 250px;
+    }
+
+    #write_btn {
+        margin-top: 1.5vh;
+        width: 95px;
+        font-size: 12pt;
+        color: #3a3a3a;
+    }
+
+    #board_list {
+        margin-top: 2vh;
+        column-gap: 20px;
+        row-gap: 20px;
+        clear: both;
+    }
+
+    /* 버튼 우측 정렬 */
+    .write {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 0px;
+    }
 }

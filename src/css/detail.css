@@ -2,8 +2,13 @@
 * {
     margin: 0;
     padding: 0;
+}
+
+/* 모달창 box-sizing 적용 제외 */
+*:not(.modal):not(.modal_content):not(.signup_content):not(.login_form input) {
     box-sizing: border-box;
 }
+
 
 /* web font */
 @font-face {
@@ -105,4 +110,29 @@ ul li {
     background-color: #205A8F;
     border-radius: 8px;
     font-family: 'GmarketSansMedium';
+}
+
+/* 모바일 반응형 */
+@media screen and (max-width:770px) {
+
+    #main {
+        padding:15px;
+    }
+
+    table {
+        margin-top: 50px;
+        width: 90vw;
+    }
+
+    #post_title {
+        font-size: 18pt;
+    }
+
+    #date, #place {
+        font-size:12pt;
+    }
+
+    #post_text {
+        font-size:12pt;
+    }
 }

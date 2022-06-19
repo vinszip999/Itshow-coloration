@@ -1,4 +1,3 @@
-/* 레이어 팝업 CSS */
 .modal {
     position: fixed;
     left: 0;
@@ -12,32 +11,29 @@
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
 
-.modal-content {
+.modal_content, .signup_content {
     position: absolute;
-    top: 50%;
+    padding: 1rem 1rem;
     left: 50%;
-    background-color: white;
-    padding: 1rem 1.5rem;
-    width: 500px;
-    height: 350px;
-    border-radius: 0.5rem;
-    text-align: center;
     transform: translate(-50%, -50%);
+    text-align: center;
+    width: 500px;
 }
 
-.signup-content {
-    position: absolute;
+.modal_content {
+    top: 50%;
+    background-color: white;
+    height: 300px;
+    border-radius: 0.5rem;
+}
+
+.signup_content {
     top: 95%;
-    left: 50%;
     background-color: #a8a7a7;
-    padding: 1rem 1.5rem;
-    width: 500px;
-    height: 60px;
+    height: 25px;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
-    text-align: center;
     font-size: 13pt;
-    transform: translate(-50%, -50%);
 }
 
 .signup {
@@ -50,8 +46,8 @@
     color: #205A8F;
 }
 
-.forget-content {
-    margin-top: 30px;
+.forget_content {
+    margin-top: 15px;
 }
 
 .forget:link, .forget:visited {
@@ -66,12 +62,12 @@
 label {
     display: block;
     margin-top: 10px;
-    letter-spacing: 2px;
 }
 
-.close-button {
+.modal_closebtn {
     position: fixed;
     width: 3rem;
+    font-size: 30px;
     left:90%;
     bottom:85%;
     line-height: 3rem;
@@ -80,33 +76,35 @@ label {
     border-radius: 0.25rem;
 }
 
-form {
-    margin: 0 auto;
-    width: 750px;
-}
-
-.modal input {
-    width: 440px;
+.login_form input {
     background-color: #efefef;
     border-radius: 6px;
+    outline: none;
     border: 1px solid #dedede;
-    padding: 10px;
-    margin-top: 3px;
-    font-size: 0.9em;
+    margin-top: 5px;
+    font-size: 12pt;
     color: #3a3a3a;
 }
 
-.modal input:focus {
-    border: 1px solid #97d6eb;
+.login_form input:focus {
+    border: 1px solid gray;
 }
 
-#submit-button {
+/* padding 까지 계산 */
+input[type='text'], input[type='password'] {
+    width: 478px;
+    padding: 10px 10px 10px 10px;
+}
+
+input[type='submit'] {
+    width:500px;
     font-family: 'GmarketSansLight';
+    padding: 10px 10px 10px 10px;
     color: white;
     background-color: #205A8F;
 }
 
-#submit-button:focus {
+#submitBtn:focus {
     outline: none;
 }
 
@@ -116,3 +114,40 @@ form {
     transform: scale(1.0);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
+
+/* 모바일 반응형 */
+@media screen and (max-width:768px) {
+
+    .modal_content {
+        width: 80vw;
+    }
+
+    .signup_content {
+        width: 80vw;
+        height:20px;
+    }
+    
+    .modal_closebtn {
+        left:88%;
+    }
+    
+    .forget_content {
+        margin-top: 20px;
+    }
+
+    input[type='text'], input[type='password'] {
+        width: 74vw;
+    }
+    
+    input[type='submit'] {
+        border-radius: 6px;
+        height:40px;
+        width:80vw;
+    }
+
+    .signup {
+        margin-bottom: 5px;
+    }
+        
+}
+

@@ -2,6 +2,9 @@
 * {
     margin: 0;
     padding: 0;
+}
+
+*:not(.modal):not(.modal_content):not(.signup_content):not(.login_form input) {
     box-sizing: border-box;
 }
 
@@ -27,7 +30,8 @@ body {
 
 /* wrapper 지정 */
 #wrapper {
-    width: 60%;
+    width: 40%;
+    /* width: 60% */
     margin : 10vh auto 5vh auto;
     border-spacing: 0 20px;
 }
@@ -79,4 +83,15 @@ body {
     margin-top: 3px;
     font-size: 0.9em;
     color: #3a3a3a;
+}
+
+
+/* 모바일 반응형 */
+@media screen and (max-width:770px) {
+    /* wrapper 지정 */
+    #wrapper {
+        width: 80%;
+        margin : 10vh auto 5vh auto;
+    }
+    
 }

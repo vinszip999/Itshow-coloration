@@ -32,3 +32,4 @@ const logo = document.querySelector('.navbar_logo');
 logo.addEventListener('click', function () {
     location.href = '../public/index.html';
 })
+

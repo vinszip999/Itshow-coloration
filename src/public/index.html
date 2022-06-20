@@ -27,10 +27,21 @@
                 <li class="highlight"><a href="help_teacher_student.html">교사도움요청</a></li>
             </ul>
 
-            <ul class="navbar_login">
+            <!-- 로그인 전 
+            <ul class="navbar_login navbar_login_false">
                 <li><a href="#" class="login">로그인</a></li>
                 <li>|</li>
                 <li><a href="terms.html">회원가입</a></li>
+            </ul> -->
+
+            <!-- 로그인 후 -->
+            <ul class="navbar_login navbar_login_true">
+                <li class="login_pc">
+                    <a href="../public/mypage.html">
+                        <img class="mypage" src="../../image/mypage.png" />
+                    </a>
+                </li>
+                <li class="login_mo"><a href="../public/mypage.html">마이페이지</a></li>
             </ul>
 
             <a href="#" class="navbar_togglebtn">
@@ -117,9 +128,9 @@
             <h1 class="modal_title">로그인</h1>
             <form action="" method="POST" class="login_form" autocomplete="off">
                 <label></label>
-                <input type="text" name="userId" required />
+                <input type="text" name="userId"  />
                 <label></label>
-                <input type="password" name="userPw" required />
+                <input type="password" name="userPw"  />
                 <label></label>
                 <input type="submit" id="submitBtn" value="로그인"/>
             </form>

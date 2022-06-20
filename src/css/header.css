@@ -61,7 +61,16 @@ a {
 }
 
 .navbar_login {
+    margin-top: 5px;
     margin-right:20px;
+}
+
+.login_pc {
+    width:25px;
+}
+
+.navbar_login_true .login_mo {
+    display: none;
 }
 
 /* PC 화면에서는 토글 버튼이 보이지 않도록 설정 */
@@ -154,5 +163,15 @@ a {
         margin-top:20px;
         margin-bottom:20px;
     }
+
+
+    .navbar_login_true .login_pc {
+        display: none;
+    }
+
+    .navbar_login_true .login_mo {
+        display: inline-block;
+    }
+    
 
 }
